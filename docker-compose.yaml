@@ -6,6 +6,7 @@ volumes:
 # 
 services:
   keycloak-db:
+      restart: unless-stopped
       image: postgres:16
       environment:
         POSTGRES_DB: keycloak
